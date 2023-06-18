@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+  height: 80%;
+  margin: 100;
+  padding: 300;
+  font-family: Arial, sans-serif;
+  overflow: visible;
+}
+
+.chat-container {
+  display: flex;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.chat-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: calc(100% - 50px);
+  padding: 10px;
+}
+
+.chat-sidebar {
+  background-color: #434441;
+  text-align: left;
+}
+
+.chat-sidebar h3 {
+  margin-top: 100;
+  font-size: 16px;
+  margin-left: 10px;
+  font-weight: bold;
+  background-color: #0c2d2d;
+}
+
+.chat-sidebar ul {
+  margin-left: 10px;
+  padding: 0px;
+  background-color: #1d5129;
+  list-style: none;
+}
+
+.chat-sidebar ul li {
+  margin-bottom: 5px;
+  background-color: #6f6c6c;
+}
+
+.chat-messages {
+  flex: 3;
+  background-color: #d8dbd9;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(200, 143, 143, 0.2);
+  overflow-y: auto;
+}
+
+.chat-messages p {
+  margin: 5px 0;
+}
+
+.chat-form-container {
+  width: 100%;
+  padding: 10px;
+  background-color: #1d5129;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#chat-form {
+  display: flex;
+  align-items: center;
+}
+
+#msg {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-send {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-send:hover {
+  background-color: #45a049;
+}
+    
+    </style>
+
+    <title>Let's Talk </title>
+    
+  </head>
+  <body>
+    <div class="chat-container">
+      <header class="chat-header">
+        <h1><i class="fas fa-smile"></i> Let's Talk</h1>
+        <a id="leave-btn" class="btn">Leave Room</a>
+      </header>
+      <main class="chat-main">
+        <div class="chat-sidebar">
+          <h3><i class="fas fa-comments"></i> Room Name:</h3>
+          <h2 id="room"></h2>
+          <h3><i class="fas fa-users"></i> Users</h3>
+          <ul id="users"></ul>
+        </div>
+        <div class="chat-messages"></div>
+      </main>
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input
+            id="msg"
+            type="text"
+            placeholder="Enter Message"
+            required
+            autocomplete="off"
+          />
+          <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

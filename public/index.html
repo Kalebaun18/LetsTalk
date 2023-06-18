@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+		integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+		crossorigin="anonymous"
+	/>
+	<link rel="stylesheet" href="css/style.css" />
+	<style>
+		html,
+		body {
+			height: 90%;
+			margin: 0;
+			overflow: visible;
+		}
+
+		.join-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			background: linear-gradient(to bottom, #327c6a, #5d280d);
+		}
+		
+		.join-text {
+			margin-top: 0px;
+			margin-bottom: 50px;
+			font-style:italic;
+			font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 10px;
+	      
+}
+
+
+		.join-header {
+         text-align: center;
+         padding: 20px;
+         background: linear-gradient(to bottom, #215246, #594031);
+         border-top-left-radius: 80px;
+         border-top-right-radius: 90px;
+         border-bottom-right-radius: 90px;
+         box-shadow: 0 2px 5px rgba(4, 4, 4, 0.3);
+}
+
+     .btn-container {
+		text-align: center;
+         padding: 0px;
+         background: rgba(20, 20, 20, 0.8);
+       
+         box-shadow: 0 2px 5px rgba(4, 4, 4, 0.3);
+        }
+
+
+		.join-main {
+			margin-top: 20px;
+			padding: 30px;
+			background: rgba(21, 54, 47, 0.8);
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		}
+
+		.join-main h1{
+			margin-bottom: 20px;
+			font-size: 28px;
+			color: var(--dark-color);
+		}
+
+		.form-control {
+			margin-bottom: 20px;
+		}
+
+		.form-control label {
+			display: block;
+			margin-bottom: 5px;
+			font-size: 16px;
+			color: var(--dark-color);
+		}
+
+		.form-control input[type="text"],
+		.form-control select {
+			font-size: 16px;
+			padding: 5px;
+			height: 40px;
+			width: 100%;
+		}
+
+		.btn {
+			margin-top: 20px;
+			width: 100%;
+			background-color: var(--primary-color);
+			color: #d9cfcf;
+			border: none;
+			border-radius: 5px;
+			font-size: 20px;
+			cursor: pointer;
+			text-align :center;
+
+
+		}
+	</style>
+	<title>Let's Talk</title>
+</head>
+<body>
+	
+
+	<div class="join-container">
+		<header class="join-text">
+			<p>"Connecting hearts, one conversation at a time"</p>
+
+		</header>
+		<header class="join-header">
+			
+			<h1><i class="fas fa-smile"></i> Let's Talk</h1>
+		</header>
+		<main class="join-main">
+			
+			<form action="chat.html">
+				<div class="form-control">
+					<label for="username">Username</label>
+					<input
+						type="text"
+						name="username"
+						id="username"
+						placeholder="Enter username..."
+						required
+					/>
+				</div>
+				<div class="form-control">
+					<label for="room">Room</label>
+					<select name="room" id="room">
+						<option value="Tech Enthusiasts">Tech Enthusiasts</option>
+						<option value="Fitness Fanatics">Fitness Fanatics</option>
+						<option value="Travel Junkies">Travel Junkies</option>
+						<option value="Music Lovers Club">Music Lovers Club</option>
+						<option value="Language Exchange">Language Exchange</option>
+					</select>
+				</div>
+				<div class="join">
+					<div class="btn-container">
+					  <button class="btn">Join Now</button>
+					</div>
+				  </div>
+				  
+			</form>
+		</main>
+	</div>
+</body>
+</html>
